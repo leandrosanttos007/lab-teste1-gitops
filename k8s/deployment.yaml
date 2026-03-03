@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab-teste1
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lab-teste1
+  template:
+    metadata:
+      labels:
+        app: lab-teste1
+    spec:
+      containers:
+      - name: lab-teste1
+        image: leandrosanttos007/lab-teste1:initial
+        ports:
+        - containerPort: 80

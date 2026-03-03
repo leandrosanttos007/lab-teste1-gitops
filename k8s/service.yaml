@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lab-teste1
+  namespace: dev
+spec:
+  selector:
+    app: lab-teste1
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
