@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: lab-teste1
-        image: leandrosanttos007/lab-teste1:initial
+        image: leandrosanttos007/lab-teste1:78b2e2c0d34f9564bd21dcc30f2380ae12661639
         ports:
         - containerPort: 80
