@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: lab-teste1
-        image: leohurin/lab-teste1:7acd09ff606e5a531abb38f2acf148f8f2c604d3
+        image: leohurin/lab-teste1:a281c0373e4e54206062ed941920cf5847aa11ad
         ports:
         - containerPort: 80
