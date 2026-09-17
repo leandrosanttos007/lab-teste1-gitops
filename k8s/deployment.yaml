@@ -18,6 +18,13 @@ spec:
         image: leohurin/lab-teste1:9993f6fb8826ad77630be2bd441bda24e256d7fb
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi
         readinessProbe:
           httpGet:
             path: /health
