@@ -17,4 +17,16 @@ spec:
       - name: lab-teste1
         image: leohurin/lab-teste1:061e527065d08dc765ca280bee8c3bb8b1475811
         ports:
-        - containerPort: 80
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 15
